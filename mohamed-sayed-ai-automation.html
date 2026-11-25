@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed Sayed | AI Automation Specialist &amp; Chatbot Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0b10;--bg2:#12141c;--ink:#f2f3f7;--mute:#9aa0b4;--line:rgba(255,255,255,.1);--acc:#5eead4;--acc2:#818cf8;--card:rgba(255,255,255,.04);
+--d:'Bricolage Grotesque','Helvetica Neue',Arial,sans-serif;--b:'Inter',system-ui,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f7fb;--bg2:#fff;--ink:#0d1020;--mute:#566079;--line:rgba(13,16,32,.12);--acc:#0f9b8a;--acc2:#5b5bd6;--card:rgba(13,16,32,.04);color-scheme:light}}
+:root[data-theme="light"]{--bg:#f6f7fb;--bg2:#fff;--ink:#0d1020;--mute:#566079;--line:rgba(13,16,32,.12);--acc:#0f9b8a;--acc2:#5b5bd6;--card:rgba(13,16,32,.04)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px))}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--b);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--d);line-height:1.02;letter-spacing:-.03em}
+.wrap{width:min(1120px,100% - 40px);margin:auto}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence baseFrequency='.9'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:55;padding:14px 0;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font:800 20px var(--d);display:flex;gap:10px;align-items:center}
+.logo i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--acc),var(--acc2));display:grid;place-items:center;color:#06130f;font-style:normal;font-size:15px}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px;color:var(--mute)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font:700 15px var(--d);background:linear-gradient(135deg,var(--acc),var(--acc2));color:#06130f;box-shadow:0 10px 40px -10px var(--acc);transition:transform .3s,box-shadow .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 50px -10px var(--acc)}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn.sm{padding:10px 20px;font-size:14px}
+@media(max-width:760px){nav ul{display:none}}
+/* hero */
+.hero{height:230vh;position:relative}
+.stick{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:grid;align-items:center}
+.layer{position:absolute;will-change:transform}
+.orb{width:60vmax;height:60vmax;border-radius:50%;filter:blur(90px);opacity:.28}
+.o1{background:var(--acc2);left:-20vmax;top:-20vmax;transform:translate(calc(var(--p)*12vmax),calc(var(--p)*18vmax))}
+.o2{background:var(--acc);right:-25vmax;bottom:-25vmax;opacity:.2;transform:translate(calc(var(--p)*-14vmax),calc(var(--p)*-10vmax))}
+.bigword{left:50%;top:50%;font:800 clamp(120px,28vw,420px)/1 var(--d);letter-spacing:-.06em;color:transparent;-webkit-text-stroke:1px var(--line);white-space:nowrap;transform:translate(calc(-50% + var(--mx,0)*-20px),calc(-50% + var(--p)*-14vh))}
+.hero .wrap{position:relative;z-index:5;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.tag{display:inline-flex;gap:10px;align-items:center;font-size:13px;color:var(--mute);border:1px solid var(--line);padding:7px 14px;border-radius:999px;background:var(--card)}
+.tag b{width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px var(--acc)}
+.hero h1{font-size:clamp(44px,7.4vw,96px);margin:22px 0;opacity:calc(1 - var(--p)*1.2);transform:translateY(calc(var(--p)*-6vh))}
+.hero h1 em{font-style:normal;background:linear-gradient(120deg,var(--acc),var(--acc2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{max-width:48ch;color:var(--mute);font-size:19px}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.portrait{position:relative;aspect-ratio:4/5;max-width:380px;justify-self:center;width:100%;transform:translate(calc(var(--mx,0)*12px),calc(var(--p)*-9vh)) scale(calc(1 + var(--p)*.06))}
+.portrait .frame{position:absolute;inset:0;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,var(--bg2),var(--bg));box-shadow:0 40px 80px -30px #000,inset 0 1px 0 rgba(255,255,255,.12)}
+.portrait .frame::before{content:"MS";position:absolute;inset:0;display:grid;place-items:center;font:800 120px var(--d);color:var(--line)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait::after{content:"";position:absolute;inset:18px -18px -18px 18px;border-radius:28px;border:1px solid var(--acc);opacity:.35;z-index:-1}
+.chip{position:absolute;padding:9px 16px;border-radius:999px;font:700 13px var(--d);background:var(--bg2);border:1px solid var(--line);box-shadow:0 14px 30px -10px #000;z-index:6;transform:translate(calc(var(--mx,0)*var(--k)*1px),calc(var(--p)*var(--s)*-1vh))}
+.c1{left:-26px;top:12%;--k:34;--s:26}.c2{right:-22px;top:44%;--k:-28;--s:16}.c3{left:6%;bottom:-14px;--k:22;--s:34}
+@media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.portrait{max-width:230px;order:-1}.hero h1{margin:14px 0}.hero p.lead{font-size:16px}.c1{left:-10px}.c2{right:-10px}}
+/* sections */
+section{padding:clamp(80px,12vw,150px) 0;position:relative}
+.eyebrow{color:var(--acc);font:700 13px var(--d);letter-spacing:.16em;text-transform:uppercase}
+h2{font-size:clamp(36px,5.4vw,68px);margin:14px 0 18px;max-width:16ch}
+.sub{color:var(--mute);max-width:54ch}
+.rv{opacity:0;transform:translateY(40px);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s;transition-delay:var(--dl,0s)}
+.rv.in{opacity:1;transform:none;filter:none}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:54px}
+.card{padding:34px 30px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card),transparent);position:relative;overflow:hidden;transition:border-color .3s,transform .5s}
+.card:hover{border-color:var(--acc);transform:translateY(-6px)}
+.card::before{content:"";position:absolute;width:180px;height:180px;right:-60px;top:-60px;background:radial-gradient(var(--acc2),transparent 70%);opacity:.25}
+.card h3{font-size:26px;margin:46px 0 10px}.card p{color:var(--mute);font-size:15.5px}
+.card span{font:800 13px var(--d);color:var(--acc)}
+@media(max-width:860px){.svc{grid-template-columns:1fr}}
+/* work */
+.work{background:linear-gradient(var(--bg),var(--bg2) 20%,var(--bg2) 80%,var(--bg))}
+.stack{margin-top:56px;display:grid;gap:26px}
+.proj{position:sticky;top:calc(88px + var(--i)*14px);display:grid;grid-template-columns:1fr 1.25fr;gap:0;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--bg2);box-shadow:0 -20px 60px -20px #000;min-height:380px}
+.proj .txt{padding:clamp(26px,4vw,48px);display:flex;flex-direction:column;justify-content:space-between;gap:30px}
+.proj h3{font-size:clamp(30px,4vw,48px);margin:10px 0 12px}.proj p{color:var(--mute);font-size:15.5px}
+.tech{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.tech span{font:700 12px var(--d);padding:6px 12px;border-radius:999px;border:1px solid var(--line);color:var(--acc)}
+.links{display:flex;gap:12px;flex-wrap:wrap}
+.media{position:relative;overflow:hidden;background:radial-gradient(circle at 30% 20%,var(--g1),transparent 60%),radial-gradient(circle at 80% 90%,var(--g2),transparent 55%),var(--bg)}
+.media::before{content:attr(data-t);position:absolute;inset:0;display:grid;place-items:center;font:800 clamp(40px,7vw,90px) var(--d);letter-spacing:-.05em;color:rgba(255,255,255,.13)}
+.media img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center}
+@media(max-width:860px){.proj{grid-template-columns:1fr;position:relative;top:0}.media{height:220px;order:-1}}
+/* stack */
+.pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.pill{padding:12px 22px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:700 15px var(--d)}
+.pill.l{color:var(--mute);border-style:dashed}
+.row{margin-top:46px}.row small{display:block;color:var(--mute);font-size:13px;margin-bottom:12px;letter-spacing:.1em;text-transform:uppercase}
+/* contact */
+.final{text-align:center;overflow:hidden}
+.final::before{content:"";position:absolute;left:50%;top:50%;width:80vmin;height:80vmin;transform:translate(-50%,-50%) scale(calc(.6 + var(--pf,0)*.5));border-radius:50%;background:conic-gradient(from 0deg,var(--acc2),var(--acc),var(--acc2));filter:blur(110px);opacity:.28}
+.final .wrap{position:relative}.final h2{margin:14px auto 20px;max-width:14ch;font-size:clamp(44px,8vw,104px)}
+.final .sub{margin:0 auto}.final .cta{justify-content:center}
+.soc{display:flex;gap:22px;justify-content:center;margin-top:44px;color:var(--mute);font-size:14px}.soc a:hover{color:var(--acc)}
+footer{padding:30px 0;border-top:1px solid var(--line);color:var(--mute);font-size:13px}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.bar{position:fixed;left:0;top:calc(env(safe-area-inset-top,0px) + 62px);height:2px;width:calc(var(--sp,0)*100%);background:linear-gradient(90deg,var(--acc),var(--acc2));z-index:56}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rv{opacity:1;transform:none;filter:none;transition:none}.layer,.portrait,.chip,.hero h1{transform:none!important}.proj{position:relative;top:0}}
+.nr{display:flex;gap:10px;align-items:center}
+.lang{font:700 13px var(--d);padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;transition:border-color .3s}.lang:hover{border-color:var(--acc)}
+html[dir=rtl]{--d:'Cairo','Segoe UI',Tahoma,sans-serif;--b:'Cairo','Segoe UI',Tahoma,sans-serif}
+html[dir=rtl] h1,html[dir=rtl] h2,html[dir=rtl] h3,html[dir=rtl] .eyebrow{letter-spacing:0}
+html[dir=rtl] body{line-height:1.85}html[dir=rtl] .bar{left:auto;right:0}
+html[dir=rtl] .portrait::after{inset:18px 18px -18px -18px}
+.stick{padding-top:calc(84px + env(safe-area-inset-top,0px))}
+html[dir=rtl] .hero h1{font-size:clamp(34px,5.6vw,72px);line-height:1.35;margin:18px 0}
+html[dir=rtl] .hero p.lead{font-size:17px;line-height:1.9}
+@media(max-width:860px){html[dir=rtl] .hero h1{font-size:clamp(30px,8vw,44px)}}
+</style>
+<script>function imgFail(i){var f=i.getAttribute("data-fb");if(f){i.removeAttribute("data-fb");i.src=f}else{i.remove()}}</script>
+</head>
+<body>
+<div class="grain"></div><div class="bar"></div>
+<nav><div class="wrap">
+<a class="logo" href="#top"><i>MS</i>Mohamed Sayed</a>
+<ul><li><a href="#services" data-ar="العمليات">Process</a></li><li><a href="#work" data-ar="الأتمتة">Automations</a></li><li><a href="#stack" data-ar="الأدوات">Stack</a></li><li><a href="#contact" data-ar="تواصل">Contact</a></li></ul>
+<span class="nr"><button class="lang" id="lang" type="button" aria-label="Switch language">العربية</button><a class="btn sm" href="#contact" data-ar="تواصل معي">Get in touch</a></span></div></nav>
+
+<header class="hero" id="top">
+<div class="stick">
+<div class="layer orb o1"></div><div class="layer orb o2"></div>
+<div class="layer bigword" aria-hidden="true">SAYED</div>
+<div class="wrap">
+<div>
+<span class="tag" data-ar="&lt;b&gt;&lt;/b&gt;أخصائي أتمتة بالذكاء الاصطناعي ومطوّر شات بوت"><b></b>AI Automation Specialist &amp; Chatbot Developer</span>
+<h1 data-ar="أتمتة بالذكاء الاصطناعي &lt;em&gt;تعمل بسلاسة&lt;/em&gt;.">AI automations that run <em>effortlessly</em>.</h1>
+<p class="lead" data-ar="أنا محمد، أخصائي أتمتة بالذكاء الاصطناعي عمري 21 عامًا وطالب علوم حاسب (تخصص ذكاء اصطناعي). أبني وكلاء ذكاء اصطناعي مستقلين وروبوتات محادثة بتقنية RAG وسير عمل مؤتمتة توفّر وقت الشركات وتلغي المهام اليدوية.">I’m Mohamed, a 21-year-old AI Automation Specialist and Computer Science (AI major) student. I build autonomous AI agents, RAG chatbots and automated workflows that save businesses time and eliminate manual tasks.</p>
+<div class="cta"><a class="btn" href="#contact" data-ar="تواصل معي ←">Get in Touch →</a><a class="btn ghost" href="#work" data-ar="شاهد الأتمتة">View Automations</a></div>
+</div>
+<div class="portrait">
+<div class="frame"><img src="img/Personal-picture1.jpg" alt="Mohamed Sayed" onerror="imgFail(this)"></div>
+<span class="chip c1">n8n</span><span class="chip c2">OpenAI API</span><span class="chip c3">AI Agents</span>
+</div>
+</div>
+</div>
+</header>
+
+<section id="services"><div class="wrap">
+<span class="eyebrow rv" data-ar="طريقة عملي">How I work</span>
+<h2 class="rv" data-ar="من العائق إلى أتمتة كاملة.">From bottleneck to automated.</h2>
+<p class="sub rv" data-ar="عملية واضحة من ثلاث خطوات، لتحلّ كل أتمتة مشكلة حقيقية وتعمل بثبات.">A clear three-step process, so every automation solves a real problem and keeps running reliably.</p>
+<div class="svc">
+<div class="card rv"><span>01</span><h3 data-ar="التحليل والتخطيط">Audit &amp; Map</h3><p data-ar="تحليل عوائق العمل، وتحديد المحفّزات، وتصميم منطق سير العمل قبل البدء في البناء.">Analyzing business bottlenecks, mapping triggers, and designing the workflow logic before anything gets built.</p></div>
+<div class="card rv" style="--dl:.12s"><span>02</span><h3 data-ar="البناء والربط">Build &amp; Integrate</h3><p data-ar="ربط واجهات الـ API، وإعداد سير عمل n8n، وضبط وكلاء OpenAI/LLM، وربط قواعد البيانات وأنظمة CRM.">Connecting APIs, setting up n8n workflows, configuring OpenAI/LLM agents, and linking databases and CRMs.</p></div>
+<div class="card rv" style="--dl:.24s"><span>03</span><h3 data-ar="الاختبار والتوسّع">Test &amp; Scale</h3><p data-ar="معالجة الحالات الاستثنائية، وإضافة تنبيهات الأخطاء، وتشغيل أتمتة موثوقة تعمل على مدار الساعة.">Handling edge cases, adding error alerts, and deploying reliable automations that run 24/7.</p></div>
+</div></div></section>
+
+<section class="work" id="work"><div class="wrap">
+<span class="eyebrow rv" data-ar="أعمال مختارة">Selected work</span>
+<h2 class="rv" data-ar="أنظمة ذكاء اصطناعي وأتمتة حقيقية.">Real AI &amp; automation systems.</h2>
+<p class="sub rv" data-ar="كل نظام يستبدل العمل اليدوي المتكرر بسير عمل يعمل تلقائيًا.">Each system replaces manual, repetitive work with a workflow that runs on its own.</p>
+<div class="stack">
+<article class="proj" style="--i:0"><div class="txt"><div><span class="eyebrow" data-ar="الرعاية الصحية">Healthcare</span><h3 data-ar="وكيل حجز مواعيد العيادات">Clinic Appointment Booking Agent</h3><p data-ar="مساعد ذكاء اصطناعي يعمل 24/7 يفرز طلبات المرضى ويتحقق من المواعيد المتاحة ويحجز تلقائيًا.">A 24/7 AI assistant that qualifies patient requests, checks availability and schedules appointments automatically.</p><div class="tech"><span>n8n</span><span>Google Sheets</span><span>Google Calendar</span></div></div><div class="links"><a class="btn sm" href="https://www.youtube.com/watch?v=Dg2KwzqFLvo" target="_blank" rel="noopener" data-ar="شاهد العرض ↖">Watch Demo ↗</a><a class="btn sm ghost" href="https://github.com/Mohamed-5ayed/n8n-clinic-appointment-ai-agent" target="_blank" rel="noopener" data-ar="تفاصيل سير العمل">Workflow Details</a></div></div><div class="media" data-t="Booking" style="--g1:#a78bfaaa;--g2:#5eead499"><img src="img/clinic-en.jpg" data-img-en="img/clinic-en.jpg" data-img-ar="img/clinic.jpg" data-fb="img/clinic.jpg" alt="Clinic Appointment Booking Agent" loading="lazy" onerror="imgFail(this)"></div></article>
+<article class="proj" style="--i:1"><div class="txt"><div><span class="eyebrow" data-ar="أتمتة المبيعات">Sales automation</span><h3 data-ar="وكيل تأهيل عملاء العقارات المحتملين">Real Estate Lead Qualification Agent</h3><p data-ar="يحادث عملاء العقارات المحتملين، ويقيّمهم، ويستخرج الميزانية والتفاصيل، ويزامن العملاء المصنّفين مع Google Sheets/CRM لحظيًا.">Chats with property leads, scores them, extracts budgets and details, and syncs categorized leads to Google Sheets/CRM in real time.</p><div class="tech"><span>n8n</span><span>OpenAI API</span><span>Google Sheets</span></div></div><div class="links"><a class="btn sm" href="https://www.youtube.com/watch?v=78_q918vbN0" target="_blank" rel="noopener" data-ar="شاهد العرض ↖">Watch Demo ↗</a><a class="btn sm ghost" href="https://github.com/Mohamed-5ayed/n8n-real-estate-lead-qualification-agent" target="_blank" rel="noopener" data-ar="تفاصيل سير العمل">Workflow Details</a></div></div><div class="media" data-t="Leads" style="--g1:#f59e0b99;--g2:#818cf899"><img src="img/real-estate.jpg" alt="Real Estate Lead Qualification Agent" loading="lazy" onerror="imgFail(this)"></div></article>
+<article class="proj" style="--i:2"><div class="txt"><div><span class="eyebrow" data-ar="ذكاء اصطناعي محادثي">Conversational AI</span><h3 data-ar="بوت دعم وطلبات للمطاعم بالذكاء الاصطناعي">AI Restaurant Support &amp; Order Bot</h3><p data-ar="وكيل محادثة يعرف قائمة الطعام عبر RAG، ويدير الطلبات تلقائيًا، ويحوّل المحادثة لموظف عند الحاجة.">Conversational agent with RAG menu knowledge, automated order handling and human-handoff escalation.</p><div class="tech"><span>n8n</span><span>OpenAI API</span><span>Telegram / WhatsApp</span></div></div><div class="links"><a class="btn sm" href="https://www.youtube.com/shorts/ak-LMRS--Pw" target="_blank" rel="noopener" data-ar="شاهد العرض ↖">Watch Demo ↗</a><a class="btn sm ghost" href="https://github.com/Mohamed-5ayed/n8n-restaurant-ai-agent" target="_blank" rel="noopener" data-ar="تفاصيل سير العمل">Workflow Details</a></div></div><div class="media" data-t="RAG Bot" style="--g1:#5eead4aa;--g2:#818cf8aa"><img src="img/restaurant-en.jpg" data-img-en="img/restaurant-en.jpg" data-img-ar="img/restaurant.jpg" data-fb="img/restaurant.jpg" alt="AI Restaurant Support and Order Bot" loading="lazy" onerror="imgFail(this)"></div></article>
+</div>
+<p class="sub rv" style="margin-top:40px"><span data-ar="المزيد على">Plus more on</span> <a href="https://github.com/Mohamed-5ayed" style="color:var(--acc)" target="_blank" rel="noopener">GitHub ↗</a></p>
+</div></section>
+
+<section id="stack"><div class="wrap">
+<span class="eyebrow rv" data-ar="الأدوات">Toolkit</span>
+<h2 class="rv" data-ar="أدواتي في الذكاء الاصطناعي والأتمتة.">My AI &amp; automation stack.</h2>
+<div class="row rv"><small data-ar="الأتمتة والذكاء الاصطناعي">Automation &amp; AI</small><div class="pills"><span class="pill">n8n</span><span class="pill">OpenAI API</span><span class="pill">OpenRouter</span><span class="pill">RAG Pipelines</span><span class="pill">Prompt Engineering</span></div></div>
+<div class="row rv"><small data-ar="قواعد البيانات وواجهات API">Databases &amp; APIs</small><div class="pills"><span class="pill">Supabase</span><span class="pill">REST APIs</span><span class="pill">Webhooks</span><span class="pill">Google Workspace APIs</span><span class="pill">Telegram &amp; WhatsApp Cloud API</span></div></div>
+<div class="row rv"><small data-ar="البرمجة والأدوات">Programming &amp; Tools</small><div class="pills"><span class="pill">Python</span><span class="pill">JavaScript</span><span class="pill">Git</span><span class="pill">GitHub</span></div></div>
+</div></section>
+
+<section class="final" id="contact"><div class="wrap">
+<span class="eyebrow rv" data-ar="هيا نؤتمت">Let’s automate</span>
+<h2 class="rv" data-ar="عندك عمل تريد أتمتته؟">Have a workflow to automate?</h2>
+<p class="sub rv" data-ar="وكلاء ذكاء اصطناعي وروبوتات RAG وأتمتة n8n مخصصة لأصحاب الأعمال الذين يريدون التوقف عن المهام اليدوية المتكررة. أخبرني ما الذي يبطئك وسأرسم لك الحل.">Custom AI agents, RAG chatbots and n8n automations for business owners who want to stop doing repetitive work by hand. Tell me what slows you down and I’ll map the fix.</p>
+<div class="cta rv"><a class="btn" href="mailto:mohamed012042979@gmail.com?subject=AI%20automation%20inquiry" data-ar="راسلني ←">Email me →</a><a class="btn ghost" href="tel:+201070408794" data-ar="اتصل بي">Call +20 107 040 8794</a></div>
+<div class="soc rv"><a href="https://www.linkedin.com/in/mohamed-sayed-75a079412/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/Mohamed-5ayed" target="_blank" rel="noopener">GitHub</a></div>
+</div></section>
+<footer><div class="wrap"><span data-ar="© 2026 محمد سيد">© 2026 Mohamed Sayed</span><a href="#top" data-ar="العودة للأعلى ↑">Back to top ↑</a></div></footer>
+
+<script>
+(function(){
+var root=document.documentElement,hero=document.querySelector('.hero'),fin=document.querySelector('.final'),projs=[].slice.call(document.querySelectorAll('.proj')),tick=false;
+var rm=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+function clamp(x){return Math.max(0,Math.min(1,x))}
+function update(){
+  var h=window.innerHeight,y=window.scrollY;
+  hero.style.setProperty('--p',clamp(y/(hero.offsetHeight-h)).toFixed(4));
+  root.style.setProperty('--sp',clamp(y/(document.body.scrollHeight-h)).toFixed(4));
+  var r=fin.getBoundingClientRect();fin.style.setProperty('--pf',clamp(1-r.top/h).toFixed(3));
+  projs.forEach(function(p){var b=p.getBoundingClientRect();p.style.setProperty('--pp',clamp((h-b.top)/(h+b.height)).toFixed(3))});
+  tick=false;
+}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+window.addEventListener('resize',update);update();
+if(!rm){window.addEventListener('pointermove',function(e){hero.style.setProperty('--mx',((e.clientX/window.innerWidth-.5)*2).toFixed(3))},{passive:true})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+<script>
+(function(){var b=document.getElementById('lang'),els=[].slice.call(document.querySelectorAll('[data-ar]'));
+els.forEach(function(e){e.setAttribute('data-en',e.innerHTML)});
+var TT={en:document.title,ar:'محمد سيد | أخصائي أتمتة بالذكاء الاصطناعي ومطوّر شات بوت'};
+function set(l){var a=l==='ar',h=document.documentElement;h.lang=l;h.dir=a?'rtl':'ltr';
+els.forEach(function(e){e.innerHTML=e.getAttribute(a?'data-ar':'data-en')});
+document.title=TT[l];[].slice.call(document.querySelectorAll('img[data-img-en]')).forEach(function(i){i.setAttribute('data-fb',a?'':i.getAttribute('data-img-ar'));i.src=a?i.getAttribute('data-img-ar'):i.getAttribute('data-img-en')});b.textContent=a?'English':'العربية';b.dataset.l=l;try{localStorage.setItem('lang',l)}catch(x){}}
+b.addEventListener('click',function(){set(b.dataset.l==='ar'?'en':'ar')});b.dataset.l='en';
+var s='en';try{s=localStorage.getItem('lang')||'en'}catch(x){}
+if(s==='ar')set('ar');})();
+</script>
+</body>
+</html>
